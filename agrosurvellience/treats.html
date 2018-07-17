@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>
+			treats - Agrosurveillence
+		</title>
+		<link rel="text/styleheet" href="/css/bootstrap.min.css">
+
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="header">Treat Captions</h1>
+				</div>
+		{{treat_names}}
+		<hr>
+		{% for treat_name in treat_names %}
+		<div class="col-lg-3 col-md-4 col-xs-6 thumbs">
+			<img class="img-responsive" src={{url for ('send_treat',filename=treat_name)}} />
+		</div>
+		{% endfor %}
+			</div>
+		</div>
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
+
+
+</html>
